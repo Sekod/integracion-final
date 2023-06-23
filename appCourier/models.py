@@ -7,5 +7,11 @@ class Solicitud(models.Model):
     direccion_origen = models.CharField(max_length=100)
     direccion_destino = models.CharField(max_length=100)
     estado = models.CharField(max_length=100, default= 'Preparacion')
+    precio= models.IntegerField(default=0)
+
+class Usuario(models.Model):
+    correo = models.EmailField(primary_key=True)
+    contraseña = models.CharField(max_length=100)
+
 
 
