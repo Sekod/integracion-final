@@ -19,6 +19,7 @@ from django.urls import path,include
 from appCourier import views
 from django.contrib.auth.views import LoginView, LogoutView
 
+    
 urlpatterns = [
     path('solicitudes/', views.lista_solicitudes, name='lista_solicitudes'),
     path('solicitudes/nuevo/', views.nuevo_solicitud, name='nuevo_solicitud'),
@@ -27,7 +28,6 @@ urlpatterns = [
     path('solicitudes/<int:pk>/eliminar/', views.eliminar_solicitud, name='eliminar_solicitud'),
     path('buscar/', views.buscar ),
     path('datos/', views.datos),
-    path('guardar_valores/', views.guardar_valores, name='guardar_valores'),
     path('api/', include('appCourier.urls')),
     path('api_saldo/', views.api_saldo),
     path('api_saludo/',views.api_saludo),
